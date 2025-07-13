@@ -169,8 +169,10 @@ return {
                 '${3rd}/luv/library',
                 unpack(vim.api.nvim_get_runtime_file('', true)),
               },
+            diagnostics = {
+              globals = { 'vim' },
+              disable = { 'missing-fields' },
             },
-            diagnostics = { disable = { 'missing-fields' } },
             format = {
               enable = false,
             },
