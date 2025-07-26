@@ -258,75 +258,77 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 
 ## General & Leader Settings
 
-| Shortcut       | Mode          | Keys     | Action                             |
-|----------------|---------------|----------|----------------------------------|
-| Set Leader     | Global        | `<Space>`| Leader key prefix (used in mappings) |
-| Disable Space  | Normal/Visual | `<Space>`| Disable default Space (no effect) |
+## General & Leader Settings
+
+| Shortcut              | Mode            | Keys               | Action                                   |
+|-----------------------|-----------------|--------------------|------------------------------------------|
+| Set Leader            | Global          | `<Space>`          | Leader key prefix (used in mappings)     |
+| Disable Space         | Normal/Visual   | `<Space>`          | Disable default Space (no effect)        |
 
 ## File Operations
 
-| Shortcut          | Mode    | Keys             | Action                      |
-|-------------------|---------|------------------|-----------------------------|
-| Save file         | Normal  | `Ctrl+s`         | Save current file           |
-| Save (no autocommand) | Normal | `Space` + `s` `n` | Save without auto-formatting |
-| Quit file         | Normal  | `Ctrl+q`         | Quit file                   |
+| Shortcut              | Mode            | Keys               | Action                                   |
+|-----------------------|-----------------|--------------------|------------------------------------------|
+| Save file             | Normal          | `Ctrl+s`           | Save current file                        |
+| Save (no autocommand) | Normal          | `Space` + `s` `n`  | Save without auto-formatting             |
+| Quit file             | Normal          | `Ctrl+q`           | Quit file                                |
 
 ## Buffer Management
 
-| Shortcut       | Mode   | Keys          | Action                   |
-|----------------|--------|---------------|--------------------------|
-| Next buffer    | Normal | `Tab`         | Switch to next buffer    |
-| Prev buffer    | Normal | `Shift+Tab`   | Switch to previous buffer|
-| New buffer     | Normal | `Space` + `b` | Open a new buffer        |
-| Close buffer   | Normal | `Space` + `x` | Force close current buffer|
+| Shortcut              | Mode            | Keys               | Action                                   |
+|-----------------------|-----------------|--------------------|------------------------------------------|
+| Next buffer           | Normal          | `Tab`              | Switch to next buffer                    |
+| Prev buffer           | Normal          | `Shift+Tab`        | Switch to previous buffer                |
+| New buffer            | Normal          | `Space` + `b`      | Open a new buffer                        |
+| Close buffer          | Normal          | `Space` + `x`      | Force close current buffer               |
 
 ## Window/Split Management
 
-| Shortcut        | Mode   | Keys          | Action                         |
-|-----------------|--------|---------------|--------------------------------|
-| Split vertically| Normal | `Space` + `v` | Vertical split                 |
-| Split horizontally | Normal | `Space` + `h` | Horizontal split              |
-| Make splits equal| Normal | `Space` + `se`| Make all splits equal size     |
-| Close split     | Normal | `Space` + `xs`| Close current split window      |
-| Resize up       | Normal | `Up Arrow`    | Decrease window height by 2 lines  |
-| Resize down     | Normal | `Down Arrow`  | Increase window height by 2 lines  |
-| Resize left     | Normal | `Left Arrow`  | Decrease window width by 2 columns |
-| Resize right    | Normal | `Right Arrow` | Increase window width by 2 columns |
-| Go split up     | Normal | `Ctrl+k`      | Focus window above            |
-| Go split down   | Normal | `Ctrl+j`      | Focus window below            |
-| Go split left   | Normal | `Ctrl+h`      | Focus window left             |
-| Go split right  | Normal | `Ctrl+l`      | Focus window right            |
+| Shortcut              | Mode            | Keys               | Action                                   |
+|-----------------------|-----------------|--------------------|------------------------------------------|
+| Split vertically      | Normal          | `Space` + `v`      | Vertical split                           |
+| Split horizontally    | Normal          | `Space` + `h`      | Horizontal split                         |
+| Make splits equal     | Normal          | `Space` + `se`     | Make all splits equal size               |
+| Close split           | Normal          | `Space` + `xs`     | Close current split window               |
+| Resize up             | Normal          | `Up Arrow`         | Decrease window height by 2 lines        |
+| Resize down           | Normal          | `Down Arrow`       | Increase window height by 2 lines        |
+| Resize left           | Normal          | `Left Arrow`       | Decrease window width by 2 columns       |
+| Resize right          | Normal          | `Right Arrow`      | Increase window width by 2 columns       |
+| Go split up           | Normal          | `Ctrl+k`           | Focus window above                       |
+| Go split down         | Normal          | `Ctrl+j`           | Focus window below                       |
+| Go split left         | Normal          | `Ctrl+h`           | Focus window left                        |
+| Go split right        | Normal          | `Ctrl+l`           | Focus window right                       |
 
 ## Tab Management
 
-| Shortcut       | Mode   | Keys           | Action                |
-|----------------|--------|----------------|-----------------------|
-| New tab        | Normal | `Space` + `to` | Open new tab          |
-| Close tab      | Normal | `Space` + `tx` | Close current tab     |
-| Next tab       | Normal | `Space` + `tn` | Switch to next tab    |
-| Previous tab   | Normal | `Space` + `tp` | Switch to previous tab|
+| Shortcut              | Mode            | Keys               | Action                                   |
+|-----------------------|-----------------|--------------------|------------------------------------------|
+| New tab               | Normal          | `Space` + `to`     | Open new tab                             |
+| Close tab             | Normal          | `Space` + `tx`     | Close current tab                        |
+| Next tab              | Normal          | `Space` + `tn`     | Switch to next tab                       |
+| Previous tab          | Normal          | `Space` + `tp`     | Switch to previous tab                   |
 
 ## Navigation & Editing
 
-| Shortcut         | Mode   | Keys         | Action                            |
-|------------------|--------|--------------|----------------------------------|
-| Delete w/o yank  | Normal | `x`          | Delete char, don't copy           |
-| Scroll down & center | Normal | `Ctrl+d`   | Half-page down, center cursor     |
-| Scroll up & center   | Normal | `Ctrl+u`   | Half-page up, center cursor       |
-| Find next & center   | Normal | `n`        | Next search, center cursor        |
-| Find prev & center   | Normal | `N`        | Prev search, center cursor        |
-| Toggle line wrap     | Normal | `Space` + `lw` | Toggle line wrapping            |
-| Indent left, stay    | Visual | `<`        | Indent selection left, remain selected|
-| Indent right, stay   | Visual | `>`        | Indent selection right, remain selected|
-| Paste (keep yank)    | Visual | `p`        | Paste over, keep original clipboard|
+| Shortcut              | Mode            | Keys               | Action                                   |
+|-----------------------|-----------------|--------------------|------------------------------------------|
+| Delete w/o yank       | Normal          | `x`                | Delete char, don't copy                  |
+| Scroll down & center  | Normal          | `Ctrl+d`           | Half-page down, center cursor            |
+| Scroll up & center    | Normal          | `Ctrl+u`           | Half-page up, center cursor              |
+| Find next & center    | Normal          | `n`                | Next search, center cursor               |
+| Find prev & center    | Normal          | `N`                | Prev search, center cursor               |
+| Toggle line wrap      | Normal          | `Space` + `lw`     | Toggle line wrapping                     |
+| Indent left, stay     | Visual          | `<`                | Indent selection left, remain selected   |
+| Indent right, stay    | Visual          | `>`                | Indent selection right, remain selected  |
+| Paste (keep yank)     | Visual          | `p`                | Paste over, keep original clipboard      |
 
 ## Diagnostics
 
-| Shortcut            | Mode   | Keys          | Action                             |
-|---------------------|--------|---------------|-----------------------------------|
-| Previous diagnostic | Normal | `[d`          | Jump to previous diagnostic (with float) |
-| Next diagnostic     | Normal | `]d`          | Jump to next diagnostic (with float)     |
-| Show diagnostic     | Normal | `Space` + `d` | Show floating diagnostic message  |
-| Diagnostics list    | Normal | `Space` + `q` | Open diagnostics in location list |
+| Shortcut              | Mode            | Keys               | Action                                   |
+|-----------------------|-----------------|--------------------|------------------------------------------|
+| Previous diagnostic   | Normal          | `[d`               | Jump to previous diagnostic (with float) |
+| Next diagnostic       | Normal          | `]d`               | Jump to next diagnostic (with float)     |
+| Show diagnostic       | Normal          | `Space` + `d`      | Show floating diagnostic message         |
+| Diagnostics list      | Normal          | `Space` + `q`      | Open diagnostics in location list        |
 
 
