@@ -330,5 +330,3 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 | Next diagnostic       | Normal          | `]d`               | Jump to next diagnostic (with float)     |
 | Show diagnostic       | Normal          | `Space` + `d`      | Show floating diagnostic message         |
 | Diagnostics list      | Normal          | `Space` + `q`      | Open diagnostics in location list        |
-
-
