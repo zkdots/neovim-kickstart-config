@@ -256,7 +256,6 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 
 # Vim Shortcuts
 
-## General & Leader Settings
 
 ## General & Leader Settings
 
@@ -330,3 +329,26 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 | Next diagnostic       | Normal          | `]d`               | Jump to next diagnostic (with float)     |
 | Show diagnostic       | Normal          | `Space` + `d`      | Show floating diagnostic message         |
 | Diagnostics list      | Normal          | `Space` + `q`      | Open diagnostics in location list        |
+
+
+# Plugins shortcuts
+
+## Autocompletion Shortcuts
+
+| Shortcut       | Mode(s)      | Action                                                                              |
+|----------------|--------------|-------------------------------------------------------------------------------------|
+| `Ctrl+n`       | Insert       | Select next completion item                                                          |
+| `Ctrl+p`       | Insert       | Select previous completion item                                                      |
+| `Ctrl+b`       | Insert       | Scroll documentation window backward by 4 lines                                      |
+| `Ctrl+f`       | Insert       | Scroll documentation window forward by 4 lines                                       |
+| `Ctrl+y`       | Insert       | Confirm selection (accept completion, trigger snippet/LSP auto-import)               |
+| `Ctrl+Space`   | Insert       | Manually trigger completion menu                                                     |
+| `Ctrl+l`       | Insert/Sel   | Expand/move to next snippet placeholder (Luasnip)                                    |
+| `Ctrl+h`       | Insert/Sel   | Move to previous snippet placeholder (Luasnip)                                       |
+| `Tab`          | Insert/Sel   | Next completion item, expand/jump in snippet, or insert Tab if nothing is available  |
+| `Shift+Tab`    | Insert/Sel   | Previous completion item, jump back in snippet, or insert Shift+Tab                  |
+
+
+
+
+
