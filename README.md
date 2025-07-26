@@ -348,6 +348,173 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 | `Tab`          | Insert/Sel   | Next completion item, expand/jump in snippet, or insert Tab if nothing is available  |
 | `Shift+Tab`    | Insert/Sel   | Previous completion item, jump back in snippet, or insert Shift+Tab                  |
 
+## Comment.nvim Shortcuts
+
+| Shortcut      | Mode        | Action                                                     |
+|---------------|-------------|------------------------------------------------------------|
+| Ctrl+/        | Normal      | Toggle comment on current line (linewise)                  |
+| Ctrl+_        | Normal      | Toggle comment on current line (linewise)                  |
+| Ctrl+c        | Normal      | Toggle comment on current line (linewise)                  |
+| Ctrl+/        | Visual      | Toggle comment on selection (linewise)                     |
+| Ctrl+_        | Visual      | Toggle comment on selection (linewise)                     |
+| Ctrl+c        | Visual      | Toggle comment on selection (linewise)                     |
+
+## Neovim LSP Keybindings
+
+| Shortcut       | Mode           | Action                                                                |
+|----------------|----------------|-----------------------------------------------------------------------|
+| `gd`           | Normal         | Go to definition (using Telescope picker)                            |
+| `gr`           | Normal         | Find references (using Telescope picker)                             |
+| `gI`           | Normal         | Go to implementation (using Telescope picker)                        |
+| `<leader>D`    | Normal         | Go to type definition (using Telescope picker)                       |
+| `<leader>ds`   | Normal         | List document symbols (using Telescope picker)                       |
+| `<leader>ws`   | Normal         | List workspace symbols (using Telescope picker)                      |
+| `<leader>rn`   | Normal         | Rename symbol under cursor                                            |
+| `<leader>ca`   | Normal, Visual | Perform code action                                                  |
+| `gD`           | Normal         | Go to declaration                                                    |
+| `<leader>th`   | Normal         | Toggle inlay hints (if supported by the LSP client)                  |
+
+### Additional Notes
+
+- These mappings are **buffer-local**, set up automatically when an LSP attaches.
+- `<leader>` corresponds to your configured leader key (often set to `<Space>`).
+- Reference highlighting under the cursor is automatically enabled if supported by the LSP.
+- The code action mapping works in both normal and visual modes.
+- Inlay hints toggle keybinding (`<leader>th`) only applies if your language server supports inlay hints.
+
+Feel free to include this snippet directly in your docs to help users understand and remember the key LSP-related commands in your Neovim setup.
+
+## Neo-tree File Explorer Shortcuts
+
+### Global/Custom Mappings
+
+| Shortcut        | Mode   | Action                                      |
+|-----------------|--------|---------------------------------------------|
+| `\`             | Normal | Reveal current file in Neo-tree (left pane) |
+| `<leader>e`     | Normal | Toggle Neo-tree file explorer (left pane)   |
+| `<leader>ngs`   | Normal | Open Neo-tree git status in floating window |
+
+---
+
+### Neo-tree Window Mappings (Default)
+
+| Shortcut               | Mode   | Action                                               |
+|------------------------|--------|------------------------------------------------------|
+| `<space>`              | Normal | Toggle node (expand/collapse folder)                 |
+| `<cr>`, `<2-LeftMouse>`, `l`   | Normal | Open file/folder                               |
+| `S`                    | Normal | Open file in split                                   |
+| `s`                    | Normal | Open file in vertical split                          |
+| `t`                    | Normal | Open file in new tab                                 |
+| `w`                    | Normal | Open file using window picker                        |
+| `P`                    | Normal | Preview file (floating window)                       |
+| `C`                    | Normal | Close folder/node                                    |
+| `z`                    | Normal | Close all folders/nodes                              |
+| `a`                    | Normal | Add a new file                                       |
+| `A`                    | Normal | Add a new directory                                  |
+| `d`                    | Normal | Delete                                               |
+| `r`                    | Normal | Rename                                               |
+| `y`                    | Normal | Copy to clipboard                                    |
+| `x`                    | Normal | Cut to clipboard                                     |
+| `p`                    | Normal | Paste from clipboard                                 |
+| `c`                    | Normal | Copy (prompt for destination)                        |
+| `m`                    | Normal | Move (prompt for destination)                        |
+| `q`                    | Normal | Close Neo-tree window                                |
+| `R`                    | Normal | Refresh tree                                         |
+| `<`, `>`               | Normal | Switch between sources (filesystem, buffers, git)    |
+| `i`                    | Normal | Show file details                                    |
+| `?`                    | Normal | Show help                                            |
+
+---
+
+### Filesystem-Specific Mappings
+
+| Shortcut             | Mode   | Action                                   |
+|----------------------|--------|------------------------------------------|
+| `<bs>`               | Normal | Go up one directory                      |
+| `.`                  | Normal | Set root to current selection            |
+| `H`                  | Normal | Toggle hidden files                      |
+| `/`                  | Normal | Fuzzy finder (filter files)              |
+| `D`                  | Normal | Fuzzy finder (in directories only)       |
+| `#`                  | Normal | Fuzzy sort (with fzy algorithm)          |
+| `f`                  | Normal | Filter files on submit                   |
+| `<c-x>`              | Normal | Clear filter                             |
+| `[g`                 | Normal | Previous git modified file               |
+| `]g`                 | Normal | Next git modified file                   |
+
+---
+
+### Buffers & Git Status Windows
+
+#### Buffer Source
+
+| Shortcut    | Mode   | Action                |
+|-------------|--------|-----------------------|
+| `bd`        | Normal | Delete buffer         |
+| `<bs>`      | Normal | Navigate up           |
+| `.`         | Normal | Set root              |
+
+#### Git Status Source (Floating)
+
+| Shortcut      | Mode   | Action                        |
+|---------------|--------|-------------------------------|
+| `A`           | Normal | Git add all                   |
+| `gu`          | Normal | Git unstage file              |
+| `ga`          | Normal | Git add file                  |
+| `gr`          | Normal | Git revert file               |
+| `gc`          | Normal | Git commit                    |
+| `gp`          | Normal | Git push                      |
+| `gg`          | Normal | Git commit and push           |
+
+---
+
+### Fuzzy Finder Popup
+
+| Shortcut    | Mode         | Action                         |
+|-------------|--------------|-------------------------------|
+| `<down>`, `Ctrl+n` | Fuzzy popup | Move selection down        |
+| `<up>`, `Ctrl+p`   | Fuzzy popup | Move selection up          |
+
+
+## Telescope.nvim Keybindings
+
+| Shortcut           | Mode   | Action                                               |
+|--------------------|--------|-----------------------------------------------------|
+| `<leader>sh`       | Normal | Search help tags                                    |
+| `<leader>sk`       | Normal | Search keymaps                                      |
+| `<leader>sf`       | Normal | Find files (honors ignore patterns, shows hidden)   |
+| `<leader>ss`       | Normal | Select a Telescope builtin/picker                   |
+| `<leader>sw`       | Normal | Search for word under cursor                        |
+| `<leader>sg`       | Normal | Live grep across project                            |
+| `<leader>sd`       | Normal | Search diagnostics (LSP/Linters)                    |
+| `<leader>sr`       | Normal | Resume previous Telescope search                    |
+| `<leader>s.`       | Normal | Open recently opened files                          |
+| `<leader><leader>` | Normal | List open buffers                                   |
+| `<leader>/`        | Normal | Fuzzy find in current buffer (dropdown, no preview) |
+| `<leader>s/`       | Normal | Live grep in open files only                        |
+
+---
+
+### Telescope Picker Window (Insert Mode)
+
+| Shortcut    | Mode     | Action                       |
+|-------------|----------|------------------------------|
+| `Ctrl+k`    | Insert   | Move to previous result      |
+| `Ctrl+j`    | Insert   | Move to next result          |
+| `Ctrl+l`    | Insert   | Select default (open entry)  |
+| `Ctrl+/`    | Insert   | Show Telescope keymaps help  |
+
+---
+
+### Notes
+
+- `<leader>` is your leader key (often `<Space>`).
+- All mappings are in **normal** mode unless otherwise specified.
+- Within Telescope, type `?` in normal mode or press `Ctrl+/` in insert mode for interactive help specific to the picker.
+- Live grep and file finders are configured to ignore common directories (e.g., `node_modules`, `.git`, `.venv`) and include hidden files.
+- Some extensions (e.g., `fzf`, `ui-select`) are loaded automatically if available and improve performance or UI.
+
+You can paste this block in your project docs to help users navigate your powerful fuzzy finder setup!
+
 
 
 
