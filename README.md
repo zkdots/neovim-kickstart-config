@@ -253,7 +253,6 @@ sudo dnf install -y gcc make git ripgrep fd-find unzip neovim
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 ```
 </details>
-<details><summary>Key Binds</summary>
 
 # Vim Shortcuts
 
@@ -331,8 +330,3 @@ sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 | Diagnostics list    | Normal | `Space` + `q` | Open diagnostics in location list |
 
 
-
-
-
-  
-</details>
