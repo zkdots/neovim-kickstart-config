@@ -39,7 +39,6 @@ return {
         linehl = 'Visual',
         numhl = 'DiagnosticSignWarn',
       })
-
       -- Automatically open/close DAP UI
       dap.listeners.after.event_initialized['dapui_config'] = function()
         dapui.open()

@@ -456,8 +456,8 @@ Feel free to include this snippet directly in your docs to help users understand
 
 | Shortcut | Mode   | Action        |
 | -------- | ------ | ------------- |
-| `bd`     | Normal | Delete buffer |
 | `<bs>`   | Normal | Navigate up   |
+| `bd`     | Normal | Delete buffer |
 | `.`      | Normal | Set root      |
 
 #### Git Status Source (Floating)
@@ -524,6 +524,39 @@ Feel free to include this snippet directly in your docs to help users understand
 | `<leader>du` | Normal | Toggle DAP UI               |
 
 ---
+
+| **Category**             | **Command**                | **Description**                                |
+| ------------------------ | -------------------------- | ---------------------------------------------- |
+| **Basic Movement**       | `h` / `j` / `k` / `l`      | Move left/down/up/right by one char            |
+|                          | `w` / `W`                  | Jump to start of next word                     |
+|                          | `b` / `B`                  | Jump to start of previous word                 |
+|                          | `e` / `E`                  | Jump to end of current/next word               |
+|                          | `0`                        | Jump to beginning of line                      |
+|                          | `^`                        | Jump to first non-blank char on line           |
+|                          | `$`                        | Jump to end of line                            |
+|                          | `gg`                       | Jump to first line of the file                 |
+|                          | `G`                        | Jump to last line of the file                  |
+| **Line & Page Movement** | `{count}j` / `{count}k`    | Move down/up multiple lines, e.g., `10j`       |
+|                          | `{number}G`                | Jump to line number, e.g., `50G`               |
+|                          | `Ctrl-d` / `Ctrl-u`        | Scroll half-page down/up                       |
+|                          | `Ctrl-f` / `Ctrl-b`        | Scroll full page down/up                       |
+|                          | `zz`                       | Center current line on screen                  |
+|                          | `zt`                       | Current line to top of window                  |
+|                          | `zb`                       | Current line to bottom of window               |
+| **Search & Jump**        | `/pattern`                 | Search forward for pattern                     |
+|                          | `?pattern`                 | Search backward for pattern                    |
+|                          | `n` / `N`                  | Repeat last search forward/backward            |
+|                          | `f<char>` / `t<char>`      | Jump forward on line to char (exact or before) |
+|                          | `;` / `,`                  | Repeat last f/t forward/reverse                |
+| **Marks & Jumps**        | `m<char>`                  | Set mark named `<char>`                        |
+|                          | `'char`                    | Jump to mark `<char>`                          |
+|                          | `%`                        | Jump to matching bracket/parenthesis           |
+|                          | `Ctrl-o` / `Ctrl-i`        | Jump backward / forward in jump list           |
+| **Window & Buffer Nav**  | `:bnext` / `:bprev`        | Go to next / previous buffer                   |
+|                          | `<Ctrl-w> h/j/k/l`         | Move between windows splits                    |
+| **Optional Plugins**     | `telescope.nvim` or `fzf`  | Fuzzy finder for files, lines, symbols         |
+|                          | `leap.nvim` or `vim-sneak` | Fast letter jumps within files                 |
+|                          | `vim-visual-multi`         | Multiple cursors editing plugin                |
 
 ### Notes
 

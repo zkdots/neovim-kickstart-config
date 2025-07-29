@@ -58,6 +58,17 @@ vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', opts) -- close current tab
 vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts) --  go to next tab
 vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts) --  go to previous tab
 
+-- Editing / Formatting
+vim.keymap.set('n', 'Y', 'y$', { desc = 'Yank to end of line' }) -- yank until the end of the line
+
+-- Normal mode: Move current line down and up
+vim.keymap.set('n', '<C-Down>', ':m .+1<CR>==', { noremap = true, desc = 'Move line down', silent = true })
+vim.keymap.set('n', '<C-Up>', ':m .-2<CR>==', { noremap = true, desc = 'Move line up', silent = true })
+
+-- Visual mode: Move selected lines down and up
+vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", { noremap = true, desc = 'Move selection down', silent = true })
+vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", { noremap = true, desc = 'Move selection up', silent = true })
+
 -- Toggle line wrapping
 vim.keymap.set('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
 
