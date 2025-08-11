@@ -8,8 +8,9 @@ return {
     },
     opts = {
       save_path = '~/Pictures',
-      has_breadcrumbs = true,
+      has_breadcrumbs = false,
       bg_theme = 'bamboo',
+      watermark = '',
     },
   },
 }
